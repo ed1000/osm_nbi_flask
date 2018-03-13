@@ -48,5 +48,5 @@ ENV OSMNBI_MESSAGE_PORT    9092
 ENV FLASK_APP   nbi.py
 ENV LC_ALL      C.UTF-8
 ENV LANG        C.UTF-8
-CMD ["python", "-m", "flask", "run", "--host=0.0.0.0", "--port=9999"]
+CMD ["python3", "-m", "flask", "run", "--host=0.0.0.0", "--port=9999"]
 
