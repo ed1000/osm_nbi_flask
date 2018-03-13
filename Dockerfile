@@ -46,5 +46,7 @@ ENV OSMNBI_MESSAGE_PORT    9092
 
 # Run app.py when the container launches
 ENV FLASK_APP   nbi.py
+ENV LC_ALL      C.UTF-8
+ENV LANG        C.UTF-8
 CMD ["flask", "run", "--host=0.0.0.0", "--port=9999"]
 
