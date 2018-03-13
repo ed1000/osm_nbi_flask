@@ -7,8 +7,8 @@ WORKDIR /app/osm_nbi
 ADD . /app
 
 RUN apt-get update && apt-get -y install git  python3 \
-    python3-cherrypy3 python3-pymongo python3-yaml python3-pip \
-    && pip3 install aiokafka \
+    python3-pymongo python3-yaml python3-pip \
+    && pip3 install aiokafka flask \
     && mkdir -p /app/storage/kafka && mkdir -p /app/log 
 
 
@@ -45,5 +45,5 @@ ENV OSMNBI_MESSAGE_HOST    kafka
 ENV OSMNBI_MESSAGE_PORT    9092
 
 # Run app.py when the container launches
-CMD ["python3", "nbi.py"]
+CMD ["flask", "run", "--host=0.0.0.0", "--port=9999"]
 
