@@ -45,5 +45,6 @@ ENV OSMNBI_MESSAGE_HOST    kafka
 ENV OSMNBI_MESSAGE_PORT    9092
 
 # Run app.py when the container launches
+ENV FLASK_APP   nbi.py
 CMD ["flask", "run", "--host=0.0.0.0", "--port=9999"]
 
