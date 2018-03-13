@@ -21,9 +21,9 @@ setup(
     data_files=[('/etc/osm/', ['osm_nbi/nbi.cfg']),
                 ('/etc/systemd/system/', ['osm_nbi/osm-nbi.service']),
                 ],
-
+    zip_safe=False,
     install_requires=[
-        'CherryPy', 'pymongo'
+        'Flask', 'pymongo'
     ],
 #    setup_requires=['setuptools-version-command'],
     # test_suite='nose.collector',
